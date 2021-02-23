@@ -1,0 +1,28 @@
+@import '../../assets/colors.scss';
+@import '../../assets/variables.scss';
+
+.input {
+    padding: 1rem;
+    margin-top: 8px;
+    margin-bottom: 1rem;
+    font-size: calc(#{$fontSize} + 1px);
+    font-weight: 400;
+    line-height: calc(#{$fontSize} + 1px);
+    letter-spacing: 1px;
+    color: $dark-gray;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px $dark-gray;
+    border: none;
+    transition: 150ms ease box-shadow;
+    &:hover {
+        box-shadow: 0 0 0 2px $dark-gray;
+    }
+    &:active {
+        box-shadow: 0 0 0 2px $peach-dark;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $peach-dark;
+        /** box-shadow: 0 0 0 2px $peach-dark, 0 0 0 4px $white, 0 0 0 8px $dark-blue; */
+    }
+}
