@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Input.scss';
 
-const Input = ({ type, lable, required, disabled, name }) => {
-    const [value, setValue] = useState('');
-    const changeHandler = (event) => {
-        setValue(event.target.value);
-    };
+const Input = ({ type, lable, required, disabled, name, changeHandler, value }) => {
     return (
         <>
             <lable for={name}>{lable}</lable>
