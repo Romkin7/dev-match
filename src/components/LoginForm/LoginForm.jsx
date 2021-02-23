@@ -13,8 +13,8 @@ const LoginForm = () => {
     };
     return (
         <form className="form">
-            <Input type="text" name="username" lable="Username" required={true} value={formState.username || ''} changeHandler={changeHandler} />
-            <Input type="password" name="password" lable="Password" required={true} value={formState.password || ''} changeHandler={changeHandler} />
+            <Input type="text" name="username" lable="Username" required={true} value={formState.username} changeHandler={changeHandler} />
+            <Input type="password" name="password" lable="Password" required={true} value={formState.password} changeHandler={changeHandler} />
             <Button
                 type="submit"
                 color="peach"
