@@ -6,7 +6,7 @@ import Input from '../Input/Input';
 const LoginForm = () => {
     const [formState, updateFormState] = useState({});
     const changeHandler = (event) => {
-        updateFormState(formState[event.target.name] = event.target.value);
+        updateFormState({[event.target.name]: event.target.value});
     };
     const submitHandler = (event) => {
         event.preventDefault();
