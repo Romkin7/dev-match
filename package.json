@@ -1,41 +1,58 @@
 {
-  "name": "forms",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "node-sass": "^5.0.0"
-  }
+    "name": "dev-match",
+    "version": "1.0.0",
+    "description": "Dev Match App",
+    "main": "packages/component-library/build/index.js",
+    "repository": "https://github.com/Romkin7/monorepo-example",
+    "author": "Roman Tuomisto",
+    "workspaces": [
+        "packages/*"
+      ],
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "7.21.0",
+        "eslint-plugin-prettier": "3.3.1",
+        "husky": "5.1.3",
+        "prettier": "2.2.1"
+    },
+    "private": true,
+    "engines": {
+        "node": ">=14.*",
+        "yarn": ">=1"
+    },
+    "scripts": {
+        "buid:back-end": "(cd packages/back-end && yarn build)",
+        "buid:front-end": "(cd packages/front-end && yarn build)",
+        "build":  "concurrently \"yarn build:back-end\" \"yarn build:front-end\"",
+        "test:back-end": "(cd packages/back-end && yarn test)",
+        "test:front-end": "(cd packages/back-end && yarn test)",
+        "test": "concurrently \"yarn test:back-end\" \"yarn test:front-end\"",
+        "start:back-end": "(cd packages/back-end && yarn start)",
+        "start:front-end": "(cd packages/front-end && yarn start)",
+        "start": "concurrently \"yarn start:back-end\" \"yarn start:front-end\"",
+        "prettier:test": "prettier --check \"{frontend,backend}/**/*.ts*\"",
+        "prettier:fix": "prettier --write \"{frontend,backend}/**/*.ts*\"",
+        "lint": "yarn prettier:test && yarn lint:backend && yarn lint:frontend",
+        "lint:backend": "(cd packages/back-end && yarn lint)",
+        "lint:frontend": "(cd packages/front-end && yarn lint)"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint",
+            "pre-push": "yarn lint"
+        }
+    },
+    "lint-staged": {
+        "*.{tsx,ts,js,scss}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "proseWrap": "always"
+    }
 }
