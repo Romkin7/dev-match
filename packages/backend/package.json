@@ -1,7 +1,7 @@
 {
-    "name": "back-end",
+    "name": "dev-match-backend",
     "version": "1.0.0",
-    "description": "devMatch back-end server",
+    "description": "devMatch backend server",
     "main": "build/server.js",
     "scripts": {
         "test": "yarn test",

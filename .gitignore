@@ -2,26 +2,26 @@
 
 # dependencies
 /node_modules
-/packages/front-end/node_modules
-/packages/back-end/node_modules
-/packages/back-end/.env
-/packages/front-end/.pnp
-/packages/front-end/.pnp.js
+/packages/frontend/node_modules
+/packages/backend/node_modules
+/packages/backend/.env
+/packages/frontend/.pnp
+/packages/frontend/.pnp.js
 
 # testing
-/packages/front-end/coverage
+/packages/frontend/coverage
 
 # production
-/packages/front-end/build
-/packages/back-end/build
+/packages/frontend/build
+/packages/backend/build
 
 # misc
-/packages/front-end.DS_Store
-/packages/front-end.env.local
-/packages/front-end.env.development.local
-/packages/front-end.env.test.local
-/packages/front-end.env.production.local
+/packages/frontend.DS_Store
+/packages/frontend.env.local
+/packages/frontend.env.development.local
+/packages/frontend.env.test.local
+/packages/frontend.env.production.local
 
-/packages/front-endnpm-debug.log*
-/packages/front-endyarn-debug.log*
-/packages/front-endyarn-error.log*
+/packages/frontendnpm-debug.log*
+/packages/frontendyarn-debug.log*
+/packages/frontendyarn-error.log*
