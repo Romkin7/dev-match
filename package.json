@@ -30,7 +30,7 @@
         "test": "concurrently \"yarn test:backend\" \"yarn test:frontend\"",
         "start:backend": "(cd packages/backend && yarn start)",
         "start:frontend": "(cd packages/frontend && yarn start)",
-        "start": "concurrently \"yarn start:backend\" \"yarn start:front-end\"",
+        "start": "concurrently \"yarn start:backend\" \"yarn start:frontend\"",
         "prettier:test": "prettier --check \"{packages/frontend,packages/backend}/**/*.ts*\"",
         "prettier:fix": "prettier --write \"{packages/frontend,packages/backend}/**/*.ts*\"",
         "lint": "yarn prettier:test && yarn lint:backend && yarn lint:frontend",
