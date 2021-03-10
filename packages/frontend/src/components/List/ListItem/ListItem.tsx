@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { INavLink } from '../../Link/Link';
+import { navLinks } from '../../NavBar/navLinks';
 
 interface IListItemProps {
     navLink?: INavLink;
@@ -9,11 +10,29 @@ interface IListItemProps {
 const ListItem: FC<IListItemProps> = (props) => {
     const { navLink } = props;
     return (
-        <li>
+        <li className={navLink ? 'list-item nav-menu--item' : 'list-item'}>
             {navLink?.external ? (
-                <a href={navLink.href}>{navLink.linkText}</a>
+                <a
+                    className={
+                        navLink
+                            ? 'list-item--link nav-menu--item---link'
+                            : 'list-item--link'
+                    }
+                    href={navLink.href}
+                >
+                    {navLink.linkText}
+                </a>
             ) : (
-                <Link to={navLink?.href as string}>{navLink?.linkText}</Link>
+                <Link
+                    className={
+                        navLink
+                            ? 'list-item--link nav-menu--item---link'
+                            : 'list-item--link'
+                    }
+                    to={navLink?.href as string}
+                >
+                    {navLink?.linkText}
+                </Link>
             )}
         </li>
     );

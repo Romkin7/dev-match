@@ -10,7 +10,7 @@ interface IListProps {
 const List: FC<IListProps> = (props) => {
     const { navLinks } = props;
     return (
-        <ul className="list">
+        <ul className={navLinks ? 'list nav-menu' : 'list'}>
             {navLinks?.length &&
                 navLinks.map((navLink: INavLink) => {
                     return <ListItem key={navLink.href} navLink={navLink} />;
