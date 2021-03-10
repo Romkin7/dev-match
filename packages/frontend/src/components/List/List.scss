@@ -1,0 +1,22 @@
+@import '../../assets/colors.scss';
+@import '../../assets/variables.scss';
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    &-left {
+        align-content: flex-start;
+    }
+    &-right {
+        align-content: flex-end;
+    }
+    &-center {
+        align-content: center;
+    }
+    &-item {
+        color: $dark-dlue;
+        &--link {
+            color: inherit;
+        }
+    }
+}
