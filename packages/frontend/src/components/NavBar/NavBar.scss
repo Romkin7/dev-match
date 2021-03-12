@@ -2,12 +2,18 @@
 .nav {
     display: flex;
     flex-direction: row;
+    align-content: center;
+    align-items: center;
     height: 7rem;
     background-color: $transparent;
     position: fixed;
     z-index: 10;
+    top: 0;
+    left: 0;
     box-shadow: 0 0 4px 2px rgba($black, 0.2);
+    width: 100%;
     &-menu {
+        flex-basis: 70%;
         display: flex;
         flex-direction: row;
         align-content: space-between;

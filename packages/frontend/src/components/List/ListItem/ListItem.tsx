@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { INavLink } from '../../Link/Link';
-import { navLinks } from '../../NavBar/navLinks';
 
 interface IListItemProps {
     navLink?: INavLink;

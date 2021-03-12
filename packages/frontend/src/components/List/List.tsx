@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { INavLink } from '../Link/Link';
 import './List.scss';
+import '../NavBar/NavBar.scss';
 import ListItem from './ListItem/ListItem';
 
 interface IListProps {
